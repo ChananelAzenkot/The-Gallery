@@ -2,7 +2,7 @@
 
 body {
     direction: rtl;
-    background-color: #1b6fb3;
+    background-color: #1b97b3;
     padding-bottom: 200px;
 }
 
@@ -14,20 +14,25 @@ h1 {
     text-align: center;
     color: white;
     margin: 16px;
+    text-shadow: 1px 2px 8px black;
 }
 
 .frame {
     width: 80%;
     max-width: 900px;
     min-height: 300px;
-    background-color: #ffffffc9;
+    background-image: linear-gradient(to bottom, #ffffffc9, #0000008c);
     margin: auto;
     padding: 8px 16px;
     border-radius: 6px;
+    box-shadow: 0 0 10px 0px #0000008c;
 }
 
 img {
     width: 100%;
+    box-shadow: 1px 1px 10px 0px #0000008c;
+    border-radius: 6px;
+    margin: 3px 0;
 }
 
 .gallery {
@@ -81,11 +86,11 @@ img {
 @media screen and (max-width: 789px) {
     .frame {
         width: 90%;
-        border-radius: 0;
+        border-radius: 6px;
     }
     .arrow {
         height: 70%;
-        width: 55px;
+        width: 45px;
         border-radius: 0;
     }
     .arrow.right::after {
