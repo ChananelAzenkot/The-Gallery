@@ -36,25 +36,35 @@ class Gallery {
     this.startAuto();
   }
 
-  nextImage() {
-    this.currentImage++;
+nextImage() {
+  this.currentImage++;
 
-    if (this.currentImage >= this.images.length) {
-      this.currentImage = 0;
-    }
-
-    this.imgElem.src = this.images[this.currentImage];
+  if (this.currentImage >= this.images.length) {
+    this.currentImage = 0;
   }
 
-  prevImage() {
-    this.currentImage--;
-
-    if (this.currentImage < 0) {
-      this.currentImage = this.images.length - 1;
-    }
-
+  this.imgElem.classList.add("fade-in");
+  setTimeout(() => {
     this.imgElem.src = this.images[this.currentImage];
+    this.imgElem.classList.remove("fade-in");
+    this.imgElem.classList.add("fade-out");
+  }, 500);
+}
+
+prevImage() {
+  this.currentImage--;
+
+  if (this.currentImage < 0) {
+    this.currentImage = this.images.length - 1;
   }
+
+  this.imgElem.classList.add("fade-in");
+  setTimeout(() => {
+    this.imgElem.src = this.images[this.currentImage];
+    this.imgElem.classList.remove("fade-in");
+    this.imgElem.classList.add("fade-out");
+  }, 500);
+}
 
   startAuto() {
     clearInterval(this.interval);

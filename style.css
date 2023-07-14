@@ -33,10 +33,24 @@ img {
     box-shadow: 1px 1px 10px 0px #0000008c;
     border-radius: 6px;
     margin: 3px 0;
+    
 }
+
+
 
 .gallery {
     position: relative;
+    animation: card 0.5s ease-in-out;
+}
+
+.fade-out {
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+}
+
+.fade-in {
+  opacity: 0.2;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .arrow {
@@ -56,6 +70,7 @@ img {
     transition: 0.3s;
     cursor: pointer;
     opacity: 0;
+    z-index: 1;
 }
 
 .arrow:hover {
